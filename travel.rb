@@ -25,4 +25,14 @@ class Travel
     def welcome
         puts "Welcome to #{@name}!"
     end
+    def print_tours
+       @tours.display
+    end
+
 end
+
+     name = "Travel Sri Lanka App"
+     tour_items = {SevenDaySurfSpotsTour: 1485.00, EightDayRelaxingSurf: 1128.00}
+     travel = Travel.new(name, tour_items)
+     travel.welcome
+     travel.print_tours

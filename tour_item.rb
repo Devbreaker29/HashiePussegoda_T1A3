@@ -6,4 +6,7 @@ class TourItem
         @price = price
     end
     
+    def to_s 
+        return "#{@name}" + "  "*(30 - @name.length)+"  ...  #{@price}"
+    end
 end

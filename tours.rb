@@ -15,4 +15,11 @@ class Tours
     def get_items
         return @tour_items
     end
+    def display
+      puts "Tours"
+      puts "--------"
+      @tour_items.each {|item| puts item}
+      return nil
+    end
 end 
+
