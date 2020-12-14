@@ -83,6 +83,11 @@ describe Travel do
       travel = Travel.new(name, tour_items)
       expect(travel.welcome).to eq(nil)
 end
+   it 'should define a print_tours method' do
+       name = "Travel Sri Lanka App"
+       tour_items = {SevenDaySurfSpotsTour: 1485.00, EightDayRelaxingSurf: 1128.00}
+       travel = Travel.new(name, tour_items)
+       expect(travel.print_tours).to eq(nil)
 end
-
+end
      
