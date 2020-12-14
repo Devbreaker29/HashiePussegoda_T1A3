@@ -21,4 +21,8 @@ class Travel
     def get_order
         return @order
     end
+
+    def welcome
+        puts "Welcome to #{@name}!"
+    end
 end

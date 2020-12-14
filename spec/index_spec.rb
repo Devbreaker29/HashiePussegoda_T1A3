@@ -77,6 +77,12 @@ describe Travel do
       travel.add_to_order(item, quantity)
       expect(travel.get_order().get_items().length).to be(1)
   end
+  it 'should define a welcome method' do
+      name = "Travel Sri Lanka App"
+      tour_items = {SevenDaySurfSpotsTour: 1485.00, EightDayRelaxingSurf: 1128.00}
+      travel = Travel.new(name, tour_items)
+      expect(travel.welcome).to eq(nil)
+end
 end
 
      
