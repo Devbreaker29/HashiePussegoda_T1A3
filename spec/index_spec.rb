@@ -5,13 +5,13 @@ require_relative '../tour_orders'
 
 describe TourItem do
     it 'should return the price of the tour' do
-        name = "7 Day Surf Spots Tour" 
+        name = "SevenDaySurfSpotsTour" 
         price = 1485.00
         tour_item = TourItem.new(name, price)
         expect(tour_item.price).to eq(price)
    end 
    it 'should return the name of the tour' do
-    name = "7 Day Surf Spots Tour" 
+    name = "SevenDaySurfSpotsTour" 
     price = 1485.00
     tour_item = TourItem.new(name, price)
     expect(tour_item.name).to eq(name)
@@ -21,32 +21,46 @@ end
 
 describe Tours do
     it 'should be able to get an item price' do
-        name = "7 Day Surf Spots Tour" 
+        name = "SevenDaySurfSpotsTour" 
         price = 1485.00
         tours = Tours.new
         tours.add_item(name, price)
         expect(tours.get_price(name)).to eq(price)
    end
     it 'should be able to add an item' do
-        name = "7 Day Surf Spots Tour" 
+        name = "SevenDaySurfSpotsTour" 
         price = 1485.00
         tours = Tours.new
         tours.add_item(name, price)
         expect(tours.get_items().length).to be(1)    
 end
+    it 'should return the item name for a valid item' do
+        name = "SevenDaySurfSpotsTour" 
+        price = 1485.00
+        tours = Tours.new
+        tours.add_item(name, price)
+        expect(tours.validate_item(name)).to eq(name)
+    end
+    it 'should return nil for an invalid item' do
+        name = "SevenDaySurfSpotsTour" 
+        price = 1485.00
+        tours = Tours.new
+        tours.add_item(name, price)
+        expect(tours.validate_item("EightDayRelaxingSurf")).to eq(nil)
+    end
 end
 
 describe TourOrder do
     it 'should add an item to the order' do
         order = TourOrder.new
-        name = "7 Day Surf Spots Tour"  
+        name = "SevenDaySurfSpotsTour"  
         quantity = 2
         order.add_item(name,quantity)
         expect(order.get_items().length).to be(1)
     end
     it 'should update an item quantity' do
     order = TourOrder.new
-    name = "7 Day Surf Spots Tour" 
+    name = "SevenDaySurfSpotsTour" 
     quantity = 2
     quantity_add = 3
     order.add_item(name,quantity)
@@ -72,7 +86,7 @@ describe Travel do
       name = "Travel Sri Lanka App"
       tour_items = {SevenDaySurfSpotsTour: 1485.00, EightDayRelaxingSurf: 1128.00} 
       travel = Travel.new(name, tour_items)
-      item = "7 Day Surf Spots Tour" 
+      item = "SevenDaySurfSpotsTour" 
       quantity = 1
       travel.add_to_order(item, quantity)
       expect(travel.get_order().get_items().length).to be(1)
@@ -88,6 +102,18 @@ end
        tour_items = {SevenDaySurfSpotsTour: 1485.00, EightDayRelaxingSurf: 1128.00}
        travel = Travel.new(name, tour_items)
        expect(travel.print_tours).to eq(nil)
+end
+   it 'should calculate order total' do
+       name = "Travel Sri Lanka App"
+       tour_items =  {"SevenDaySurfSpotsTour" => 1485.00, "EightDayRelaxingSurf" => 1128.00} 
+       travel = Travel.new(name, tour_items)
+       item = "SevenDaySurfSpotsTour" 
+       quantity = 1
+       travel.add_to_order(item, quantity)
+       item = "SevenDaySurfSpotsTour"
+       quantity = 2
+       travel.add_to_order(item, quantity)
+       expect(travel.order_total).to be(4455.00)
 end
 end
      
