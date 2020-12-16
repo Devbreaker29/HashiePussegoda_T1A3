@@ -25,14 +25,28 @@ class Travel
     def welcome
         puts "Welcome to #{@name}!"
     end
+
+    def order_total
+        total = 0
+        @order.get_items.each do |item,quantity|
+            total += @tours.get_price(item) * quantity
+        end
+        return total
+    end
+
+    def print_order
+        if @order
+            @order.display
+            puts "Total:      $%.2f" % order_total
+        else
+            puts "Thank you for touring with us!"
+        end
+        puts
+    end
+
     def print_tours
        @tours.display
     end
-
 end
 
-     name = "Travel Sri Lanka App"
-     tour_items = {SevenDaySurfSpotsTour: 1485.00, EightDayRelaxingSurf: 1128.00}
-     travel = Travel.new(name, tour_items)
-     travel.welcome
-     travel.print_tours
+    
