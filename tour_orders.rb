@@ -8,4 +8,15 @@ class TourOrder
     def get_items
         return @order_items
     end
+
+    def display
+        puts " "
+        puts "Thank you for coming!"
+        puts "Here is your order"
+        puts "  "
+        @order_items.each do |name, quantity|
+        puts "#{quantity} #{name}"
+        puts "  "
+    end
+end
 end
