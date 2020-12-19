@@ -14,7 +14,7 @@ class Travel
             @tours.add_item(name,price)
     end
     end
-    def add_to_order(item,quantity)
+    def add_to_order(item, quantity)
         @order.add_item(item, quantity)
     end
     
@@ -24,8 +24,9 @@ class Travel
 
     def welcome
         puts "Welcome to #{@name}!"
+        puts " "     
     end
-
+        
     def order_total
         total = 0
         @order.get_items.each do |item,quantity|
@@ -33,6 +34,7 @@ class Travel
         end
         return total
     end
+
 
     def print_order
         if @order
@@ -42,11 +44,25 @@ class Travel
             puts "Thank you for touring with us!"
         end
         puts
-    end
 
-    def print_tours
-       @tours.display
-    end
+        # if (input === 'sevendaysurfspotstour' || input === "eightdayrelaxingsurf" || input === "fourteendaysurfguidingwithtours")
+        #     then
+        #     print quantity
+        #     print input
+        #    end
+
+        if order_total === 0
+            puts "You order is empty."
+        else
+          puts "Thank you for touring with us."
+        end
+        # if order_total > 0
+        #     puts "Thank you here is your order"
+        #     puts "-----------------------------"
+        #  end
+        end
+
+def print_tours
+    @tours.display
+ end
 end
-
-    

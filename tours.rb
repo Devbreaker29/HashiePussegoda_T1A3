@@ -24,7 +24,7 @@ class Tours
 
     def validate_item(name)
         @tour_items.each do |tour_item|
-            if tour_item.name === name
+            if tour_item.name == name
                  return name
             end
          end
