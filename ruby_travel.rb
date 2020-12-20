@@ -1,5 +1,7 @@
 require_relative './travel'
 require "tty-prompt"
+require 'colorize'
+
 
 prompt = TTY::Prompt.new
 
@@ -9,13 +11,12 @@ travel = Travel.new("Adventure Tours",tours)
 
 travel.welcome
 
-
 loop do
     travel.print_tours
     # which tour would you like?
     # gem tty prompt 
     puts "  "
-    puts "Would you like a tour? When you are finished type 'done'."
+    puts "Would you like a tour? When you are finished type 'done'.".green
     input = gets.strip
     # if 'done', break from loop
     if (input === 'done')
@@ -27,14 +28,13 @@ loop do
     item = travel.tours.validate_item(input)
     if (item)
         puts "  "
-        puts "How many tours would you like?"
+        puts "How many tours would you like?".green
         quantity = gets.to_i
         if (quantity > 0)
             travel.add_to_order(item, quantity)
          end
     end
 end
-
 
 #  print the order summary
 
