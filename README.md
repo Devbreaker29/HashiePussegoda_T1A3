@@ -2,6 +2,8 @@
 
 Travel App for Ruby Terminal Assignment  
 
+[Repository](https://github.com/Devbreaker29/HashiePussegoda_T1A3)
+
 ## Software Development Plan
 
 ### Purpose and Scope of Application
@@ -18,7 +20,7 @@ Customers can read the tours available in the Travel App and choose a tour or to
 There are various classes in the terminal app which define the variables and ensure that the tests have been passed and the app is running. The classes are for the categories of Travel, Tours, TourItem and TourOrder and define the variables and provide indepth functioning for the app. These are known as variables and variable scope.
 
 #### loops and conditional control structures
-A loop was made in the Travel App under ruby_travel.rb. The purpose of the loop was to print a message "Would you like a tour? When you are finished type 'done'." and then enable the user to type done. This loop along with another loop whihc was an If statement was done to allow the user buy tours and otherwise type 'done when 'done'. The loops were made to conviniently make the user click done when making and order and enabled the user to order with convenience. This was called loops and conditional control structures.
+A loop was made in the Travel App under ruby_travel.rb. The purpose of the loop was to print a message "Would you like a tour? When you are finished type 'done'." and then enable the user to type done. This loop along with another loop which was an If statement was done to allow the user buy tours and otherwise type 'done when 'done'. The loops were made to conviniently make the user click done when making and order and enabled the user to order with convenience. This was called loops and conditional control structures.
 
 #### write and utilise simple functions
 
@@ -38,7 +40,8 @@ The user will interact with each feature by running each test using the rspec ge
 
 Errors will be handled in the sense that if the user doesn't type a relevant tour the price will not register. Apart from the terminal app there are no errors. Errors were handled by asking help and trying solve the problem so that the error could be fixed.
 
-### diagram
+### diagrams
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 ### Implementation Plan
 
@@ -48,3 +51,22 @@ Have to write tests for each class.
 
 Need a file where you can run the file and the terminal app.
 
+Need to run loops.
+
+Need to run command line arguments and options to put input.
+
+Need to make a script to run app.
+
+Need tell people how to run my app.
+
+Trello link
+
+### How to install the application?
+
+Download on Github.
+
+Open in VSCode.
+
+cd to appropriate file.
+
+Then type ruby ruby_travel.rb.
