@@ -41,7 +41,8 @@ The user will interact with each feature by running each test using the rspec ge
 Errors will be handled in the sense that if the user doesn't type a relevant tour the price will not register. Apart from the terminal app there are no errors. Errors were handled by asking help and trying solve the problem so that the error could be fixed.
 
 ### diagrams
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Flow chart](Img/travel_app_flow_chart_3.png)
+![Data Flow Diagram](Img/travel_app_data_flow_diagram_2.png)
 
 ### Implementation Plan
 
@@ -70,3 +71,4 @@ Open in VSCode.
 cd to appropriate file.
 
 Then type ruby ruby_travel.rb.
+
